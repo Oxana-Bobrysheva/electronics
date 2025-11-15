@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import NetworkNode
+from .serializers import NetworkNodeSerializer
 
-# Create your views here.
+class NetworkNodeViewSet(viewsets.ModelViewSet):
+    queryset = NetworkNode.objects.all()
+    serializer_class = NetworkNodeSerializer
