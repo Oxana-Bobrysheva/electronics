@@ -7,6 +7,7 @@ class ContactSerializer(serializers.ModelSerializer):
         model = Contact
         fields = ['email', 'country', 'city', 'street', 'house_number']
 
+
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product

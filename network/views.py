@@ -8,15 +8,18 @@ class IsActiveEmployee(permissions.BasePermission):
     def has_permission(self, request, view):
         return request.user and request.user.is_authenticated and request.user.is_active
 
+
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
     permission_classes = [IsActiveEmployee]
 
+
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [IsActiveEmployee]
+
 
 class NetworkNodeViewSet(viewsets.ModelViewSet):
     queryset = NetworkNode.objects.all()

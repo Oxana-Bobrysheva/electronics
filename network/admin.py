@@ -3,13 +3,16 @@ from django.utils.html import format_html
 
 from .models import Contact, Product, NetworkNode
 
+
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['email', 'country', 'city']
 
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'model', 'release_date']
+
 
 @admin.register(NetworkNode)
 class NetworkNodeAdmin(admin.ModelAdmin):
