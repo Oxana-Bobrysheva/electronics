@@ -75,3 +75,18 @@ def level(self):
 
 Доступ к API имеют только аутентифицированные активные сотрудники.  
 Используется стандартная Django аутентификация.
+
+## 🧪 Тестирование
+
+```bash
+# Запуск тестов
+python manage.py test
+
+# Запуск тестов с покрытием
+coverage run --source='.' manage.py test
+coverage report
+
+# Генерация HTML отчета
+coverage html
+# Открыть htmlcov/index.html в браузере
+```
